@@ -5,17 +5,17 @@ function validate()
             var che = check(password)
             window.alert(uname)
             window.alert(typeof(password))
-            if(uname ==" " || password ==" ")
+            if(uname.length ==0)
+            {
             document.getElementById("ans").innerHTML = "Enter both username and password";
-            if(che == "false")
+            }
+            else if(che == "false")
             {
                 document.getElementById("ans").innerHTML = "Invalid username or password";    
             }
-
             else{
                 document.getElementById("ans").innerHTML = "Login Successful";
             }
-            
         }
 function check(password)
     {
