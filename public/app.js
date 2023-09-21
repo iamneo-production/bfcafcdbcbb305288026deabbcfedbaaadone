@@ -3,10 +3,14 @@ function validate()
             var uname = document.getElementById("name").value;
             var password = document.getElementById("pwd").value;
             var che = check(password)
-            if(uname != "admin" || che =="false")
+            window.alert(che)
+            if(uname.length ==0 && password.length ==0)
+            document.getElementById("ans").innerHTML = "Enter both username and password";
+            if(che == "false")
             {
-                document.getElementById("ans").innerHTML = "check id or pwd";
+                document.getElementById("ans").innerHTML = "Invalid username or password";    
             }
+
             else{
                 document.getElementById("ans").innerHTML = "Login Successful";
             }
@@ -14,9 +18,10 @@ function validate()
         }
 function check(password)
     {
-        var exp1 = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]/
+
+        var exp1 = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/
         if(password.match(exp1))
-            return true                
+            return "true"                
         else
-            return false;           
-        }
+            return "false";
+    }
