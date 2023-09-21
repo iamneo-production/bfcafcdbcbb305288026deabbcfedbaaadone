@@ -1,11 +1,11 @@
 function validate()
         {
-            var uname = document.getElementById("name").value;
-            var password = document.getElementById("pwd").value;
+            var uname = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
             var che = check(password)
-            window.alert(uname.length)
-            window.alert(typeof(password.length))
-            if(uname =="" && password =="")
+            window.alert(uname)
+            window.alert(typeof(password))
+            if(uname ==" " || password ==" ")
             document.getElementById("ans").innerHTML = "Enter both username and password";
             if(che == "false")
             {
