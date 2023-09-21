@@ -18,7 +18,7 @@ form
     justify-content: center;
     align-items: center;
 }
-#result
+button
 {
     background-color: green;
     width: 80px;
