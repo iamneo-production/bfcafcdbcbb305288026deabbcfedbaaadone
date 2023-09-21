@@ -3,18 +3,16 @@ function validate()
             var uname = document.getElementById("username").value;
             var password = document.getElementById("password").value;
             var che = check(password)
-            window.alert(uname)
-            window.alert(typeof(password))
             if(uname.length ==0)
             {
-            document.getElementById("ans").innerHTML = "Enter both username and password";
+            document.getElementById("ans").innerHTML = "Please enter both username and password.";
             }
             else if(che == "false")
             {
-                document.getElementById("ans").innerHTML = "Invalid username or password";    
+                document.getElementById("ans").innerHTML = "Invalid username or password.";    
             }
             else{
-                document.getElementById("ans").innerHTML = "Login Successful";
+                document.getElementById("ans").innerHTML = "Login Successful.";
             }
         }
 function check(password)
