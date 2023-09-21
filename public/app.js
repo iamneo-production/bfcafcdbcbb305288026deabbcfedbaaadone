@@ -3,8 +3,9 @@ function validate()
             var uname = document.getElementById("name").value;
             var password = document.getElementById("pwd").value;
             var che = check(password)
-            window.alert(che)
-            if(uname.length ==0 && password.length ==0)
+            window.alert(uname.length)
+            window.alert(typeof(password.length))
+            if(uname =="" && password =="")
             document.getElementById("ans").innerHTML = "Enter both username and password";
             if(che == "false")
             {
