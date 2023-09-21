@@ -18,7 +18,7 @@ function validate()
 function check(password)
     {
 
-        var exp1 = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/
+        var exp1 = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]/
         if(password.match(exp1))
             return "true"                
         else
